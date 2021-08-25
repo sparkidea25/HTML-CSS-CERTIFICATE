@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Cerfiticate</title>
+</head>
+<style>
+    body {
+        position: relative;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    p {
+        margin: 0;
+    }
+    
+    .box {
+        background: #a0442f;
+        /* height: 600px;
+        width: 1200px;
+        margin: 25px;
+        padding: 20px;
+        padding-left: 40px;
+        padding-right: 40px; */
+        width: 1000px;
+        height: 700px;
+        border: 35px solid #a0442f;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .box::before {
+        content: "";
+        display: block;
+        background: #a0442f;
+        /* border-style: solid; */
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        z-index: 5;
+    }
+    
+    .box::after {
+        content: "";
+        display: block;
+        background: #a0442f;
+        position: absolute;
+        top: -12px;
+        right: -12px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        z-index: 5;
+    }
+    /* .box p {
+        color: #fafafa;
+    } */
+    
+    .box .boxBtm {
+        height: 100%;
+        display: flex;
+        overflow: hidden;
+    }
+    
+    .box .boxBtm::before {
+        content: "";
+        display: block;
+        background: #a0442f;
+        position: absolute;
+        bottom: -12px;
+        left: -12px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        z-index: 5;
+    }
+    
+    .box .boxBtm::after {
+        content: "";
+        display: block;
+        background: #a0442f;
+        position: absolute;
+        bottom: -12px;
+        right: -12px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        z-index: 5;
+    }
+    
+    .yellow-box {
+        position: relative;
+        width: 100%;
+        border: 5px solid #f5b245;
+    }
+    
+    .yellow-box::after {
+        content: "";
+        display: block;
+        background: #f5b245;
+        position: absolute;
+        top: -13px;
+        right: -13px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        z-index: 4;
+    }
+    
+    .yellow-box::before {
+        content: "";
+        display: block;
+        background: #f5b245;
+        position: absolute;
+        top: -13px;
+        left: -13px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        z-index: 4;
+    }
+    
+    .yellow-boxBtm {
+        height: 100%;
+        display: flex;
+        overflow: hidden;
+    }
+    
+    .yellow-boxBtm::after {
+        content: "";
+        display: block;
+        background: #f5b245;
+        position: absolute;
+        bottom: -13px;
+        left: -13px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        z-index: 4;
+    }
+    
+    .yellow-boxBtm::before {
+        content: "";
+        display: block;
+        background: #f5b245;
+        position: absolute;
+        bottom: -13px;
+        right: -13px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        z-index: 4;
+    }
+    
+    .blue-box {
+        position: relative;
+        width: 100%;
+        border: 7px solid #225163;
+        background-color: #fff;
+    }
+    
+    .blue-box::after {
+        content: "";
+        display: block;
+        background: #225163;
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        z-index: 3;
+    }
+    
+    .blue-box::before {
+        content: "";
+        display: block;
+        background: #225163;
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        z-index: 3;
+    }
+    
+    .blue-boxBtm {
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    .blue-boxBtm::after {
+        content: "";
+        display: block;
+        background: #225163;
+        position: absolute;
+        bottom: -15px;
+        left: -15px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        z-index: 3;
+    }
+    
+    .blue-boxBtm::before {
+        content: "";
+        display: block;
+        background: #225163;
+        position: absolute;
+        bottom: -15px;
+        right: -15px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        z-index: 3;
+    }
+    /* Content */
+    
+    .title1 {
+        text-align: center;
+        font-size: 60px;
+        font-style: italic;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 20px;
+    }
+    
+    .subtitle-box1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -10px;
+    }
+    
+    .subtitle1 {
+        text-align: center;
+        color: #aaa;
+        font-style: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin-right: 20px;
+    }
+    
+    .usbc-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 7px;
+        border-radius: 50%;
+        background-color: #161652;
+    }
+    
+    .usbc-sub-box {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 2px solid #9a5473;
+        color: #fff;
+        text-align: center;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: -2px;
+    }
+    /* Card Box */
+    
+    .card-box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 15px;
+    }
+    
+    .card-img {
+        width: 900px;
+        height: 90px;
+    }
+    
+    .card-title {
+        position: absolute;
+        margin-top: 10px;
+        font-size: 42px;
+        font-weight: 600;
+        color: #435448;
+    }
+    
+    .card-subtitle {
+        position: absolute;
+        bottom: -5px;
+        font-size: 22px;
+        font-weight: 600;
+        color: #4b6067;
+    }
+    /* Business name */
+    
+    .title2 {
+        width: 600px;
+        padding: 20px 0 10px 0;
+        margin-bottom: 20px;
+        border-bottom: 3px solid #a97c72;
+        font-size: 30px;
+        font-weight: 500;
+        text-align: center;
+        margin: auto;
+    }
+    /* Description */
+    
+    .desc-box {
+        width: 800px;
+        margin: auto;
+        padding-top: 25px;
+    }
+    
+    .desc1 {
+        color: #444;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .desc-subbox1 {
+        color: #444;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .desc-subbox1 span {
+        display: block;
+    }
+    
+    .desc-subbox1 span b {
+        font-weight: normal;
+        margin-left: 70px;
+    }
+    
+    .desc-subbox2 {
+        margin-top: 70px;
+    }
+    
+    .desc-subbox2-sign {
+        display: inline-block;
+        font-size: 35px;
+        font-style: italic;
+        color: #7c8dbb;
+        line-height: 1;
+        border-bottom: 2px solid #a97c72;
+    }
+    
+    .desc-subbox2-name {
+        font-size: 30px;
+        font-weight: 600;
+        color: #444;
+    }
+    
+    .desc-subbox2-copyright {
+        font-size: 14px;
+        font-style: italic;
+        color: #444;
+        font-weight: 600;
+    }
+    
+    .logo {
+        position: absolute;
+        bottom: 5px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        width: 230px;
+        height: 230px;
+        z-index: 10;
+    }
+    
+    .logo img {
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <div class="boxBtm">
+            <div class="yellow-box">
+                <div class="yellow-boxBtm">
+                    <div class="blue-box">
+                        <div class="blue-boxBtm">
+                            <p class="title1">By Black.</p>
+                            <div class="subtitle-box1">
+                                <p class="subtitle1">POWERED BY</p>
+                                <div class="usbc-box">
+                                    <p class="usbc-sub-box">USBC</p>
+                                </div>
+                            </div>
+                            <div class="card-box">
+                                <img src="./assets/images/img-card.jpg" class="card-img">
+                                <p class="card-title">CERTIFIED BLACK-OWNED</p>
+                                <p class="card-subtitle">THIS CERTIFICATE IS HEREBY APPONITED TO:</p>
+                            </div>
+                            <p class="title2">BUSINESS NAME</p>
+                            <div class="desc-box">
+                                <p class="desc1">And its owner(s), [BUSINESS OWNER NAME], It is hereby certified as a Black Owned and operated enterprise as defined by U.S. Black Chambers, Inc, and its national affiliates, at the time of this certificate award, deem this
+                                    business worthy of all contracts and opportunities available to a minority-owned business.
+                                </p>
+                                <div class="desc-subbox1">
+                                    <p class="desc-subbox1-left">
+                                        <span>Issued on: August 13, 2021</span>
+                                        <span>Certification Number: EE63tWwgC53Uv6Xwp3wp</span>
+                                        <span>Expiration Date: August 13, 2023</span>
+                                    </p>
+                                    <p class="desc-subbox1-right">
+                                        <span>NAICS Code(s): 284401-04 <b>Description</b></span>
+                                        <span>on their profucts/services as defined by the North</span>
+                                        <span>American Industry Classification System (NAICS)</span>
+                                    </p>
+                                </div>
+                                <div class="desc-subbox2">
+                                    <p class="desc-subbox2-sign">Ron Busby Sr</p>
+                                    <p class="desc-subbox2-name">Ron Busby, Sr.</p>
+                                    <p class="desc-subbox2-copyright">President CFO, U.S Black Chambers, Inc</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="logo">
+        <img src="./assets/images/logo.png">
+    </div>
+</body>
+
+</html>
